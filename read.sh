@@ -18,7 +18,7 @@ done
 			echo "Press any key to SSH, exit yourself if you're done."
 			read
 			clear
-			. ccbcssh.sh
+			. ssh.sh
 
 	;;
 		n)

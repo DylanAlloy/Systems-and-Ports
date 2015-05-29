@@ -1,3 +1,2 @@
---Enter IPs to scan below--
-<ip1..>
-<ip2..>
+192.168.1.6
+--enter servers to scan here--

@@ -2,17 +2,22 @@
 
 
 #INTRODUCTION
-echo ------------
+echo "------------"
 tput setaf 3
-echo Systems and Ports Copyright (C) 2013 Dylan Moore
+echo Systems and Ports Copyright "(C) 2013 Dylan Moore"
 tput sgr0
-echo This program comes with ABSOLUTELY NO WARRANTY; for details see the git.
-echo This is free software, and you are welcome to redistribute it
-echo under certain conditions, see the git for more info.
-echo ------------
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details see the git."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions, see the git for more info."
+echo "------------"
 
 #DISTRO DETECT
 	if [ -f /etc/debian_version ]; then
+                PKG0=$(dpkg-query -W --showformat='${Status}\n' zenity|grep "install ok installed")
+                if [ "" == "$PKG0" ]; then
+                        sudo apt-get --force-yes --yes install zenity
+                        notify-send "Zenity GUI elements installed"
+                fi
 		PKG1=$(dpkg-query -W --showformat='${Status}\n' libnotify-bin|grep "install ok installed")
 		if [ "" == "$PKG1" ]; then
 			sudo apt-get --force-yes --yes install libnotify-bin
@@ -29,6 +34,11 @@ wait
 	
 
 	else
+                PKG0=$(dpkg-query -W --showformat='${Status}\n' zenity|grep "install ok installed")
+                if [ "" == "$PKG0" ]; then
+                        sudo yum --force-yes --yes install zenity
+                        notify-send "Zenity GUI elements installed"
+                fi
 		PKG1=$(dpkg-query -W --showformat='${Status}\n' libnotify-bin|grep "install ok installed")
 		if [ "" == "$PKG1" ]; then
 			sudo yum --force-yes --yes install libnotify-bin

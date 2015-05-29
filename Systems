@@ -1,1 +1,5 @@
---log file--
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2014-07-10 17:37 EDT
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 0 IP addresses (0 hosts up) scanned in 1.12 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)

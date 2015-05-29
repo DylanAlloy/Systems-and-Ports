@@ -9,7 +9,7 @@ echo "M A I N - M E N U"
 tput sgr0
  
 tput cup 7 15
-echo "1. Find Linux Servers"
+echo "1. Find Servers"
  
 tput cup 8 15
 echo "2. Get Release Info"
