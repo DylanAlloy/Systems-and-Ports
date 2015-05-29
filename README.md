@@ -7,3 +7,6 @@ who knows bash scripting as well as nmap commands.
 
 I may add to this, I may not. It's not particularly advanced, but it is easy to use and is a good tool for beginners though
 it is really only useful in a lab setting as most of nmap's function breaks US law without explicit permission.
+
+# USE
+Put ips in the "ips.txt" document. Run the program from the right directory using "bash init.sh". 
